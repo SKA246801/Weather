@@ -1,0 +1,37 @@
+.weather-title {
+    text-align: center;
+}
+
+.five-title {
+    padding-bottom: 15px;
+}
+
+.fiveDay {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fiveDayBoxes {
+    border: black;
+    border-style: solid;
+    padding: 0px 25px 0px 10px;
+}
+
+.searchBox {
+    float: left;
+    min-width: 20vw; 
+}
+
+.weather-box {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    min-width: 80vw;
+}
+
+.historyButtons {
+    display: flex;
+    flex-direction: column;
+    max-width: 20vw;
+    
+}
