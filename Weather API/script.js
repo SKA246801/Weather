@@ -4,7 +4,7 @@ function currentWeather () {
     const units = 'Imperial'
     const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=59ce9979d216eec50d11d1264a7bbb34`
     fetch(queryURL).then(response => response.json()).then(data => {
-        
+        console.log(data)
         let cityTemp = document.querySelector('#temp')
         let cityWind = document.querySelector('#wind')
         let cityHumidity = document.querySelector('#humidity')
@@ -40,7 +40,6 @@ function saveCity (city) {
         searchedCities = []
     } 
     searchedCities.push(city)
-    console.log(searchedCities)
     localStorage.setItem("savedCities", JSON.stringify(searchedCities))
     const history = $('.searchHistory')
     history.html('')
@@ -64,11 +63,11 @@ const handleSearchHistoryClick = (e) => {
                 let cityTemp = document.querySelector('#temp')
                 let cityWind = document.querySelector('#wind')
                 let cityHumidity = document.querySelector('#humidity')
-                cityTemp.textContent = "Temperature: " + data.main.temp + " &#176F"
-                cityWind.textContent = "Wind Speed: " + data.wind.speed + " MPH"
-                cityHumidity.textContent = "Humidity: " + data.main.humidity + "%"
+                cityTemp.innerHTML = "Temperature: " + data.main.temp + " &#176F"
+                cityWind.innerHTML = "Wind Speed: " + data.wind.speed + " MPH"
+                cityHumidity.innerHTML = "Humidity: " + data.main.humidity + "%"
                 let time = document.querySelector(".time")
-                time.textContent = data.name + " (" + moment().format('MMMM Do YYYY') + ")"
+                time.innerHTML = data.name + " (" + moment().format('MMMM Do YYYY') + ")"
             })
             fiveDayForecast(city)
 }

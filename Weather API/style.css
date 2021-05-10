@@ -1,9 +1,20 @@
+* {
+}
+
 .weather-title {
     text-align: center;
+    color: rgb(0, 102, 255);
 }
 
 .five-title {
     padding-bottom: 15px;
+    color: rgb(0, 102, 255);
+}
+
+.currentWeather {
+    border: yellow;
+    border-style: solid;
+    padding-left: 10px;
 }
 
 .fiveDay {
@@ -12,7 +23,7 @@
 }
 
 .fiveDayBoxes {
-    border: black;
+    border: yellow;
     border-style: solid;
     padding: 0px 25px 0px 10px;
 }
@@ -22,6 +33,10 @@
     min-width: 20vw; 
 }
 
+#searchBar {
+    margin-left: 10px;
+}
+
 .weather-box {
     display: flex;
     flex-direction: column;
@@ -29,9 +44,22 @@
     min-width: 80vw;
 }
 
+#searchBtn:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
 .historyButtons {
     display: flex;
     flex-direction: column;
+    padding: 0px 50px;
+    margin: 10px 0px 0px 10px;
     max-width: 20vw;
-    
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+}
+
+.historyButtons:hover {
+    transform: scale(1.03);
 }
